@@ -1,0 +1,18 @@
+---
+title: "Norm Plots"
+author: "Ildefonso Cases"
+date: "2020-11-11"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+El camino que lleva a Belén baja hasta el valle que la nieve cubrió:
+
+```{r message=FALSE, warning=FALSE,echo=FALSE,fig.width=6,fig.asp=1}
+library(tidyverse,warn.conflicts = FALSE)
+ggplot(tibble(x=rnorm(100),y=rnorm(100)),aes(x,y))+geom_density_2d()
+```
+
